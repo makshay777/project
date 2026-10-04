@@ -2,11 +2,24 @@
 /out/
 /target/
 *.class
+*.jar
+*.war
+*.nar
+*.ear
 
 # IDE metadata
 .vscode/
 .idea/
 *.iml
+
+# Logs and Java crash reports
+*.log
+hs_err_pid*
+replay_pid*
+
+# BlueJ and J2ME
+*.ctxt
+.mtj.tmp/
 
 # Operating system files
 .DS_Store
