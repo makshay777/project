@@ -1,0 +1,235 @@
+%PDF-1.4
+%StudyNotes
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R ] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 5140 >>
+stream
+0.12 0.21 0.39 rg 0 778 612 14 re f
+0.12 0.31 0.68 rg 0 778 8 14 re f
+BT /F2 27.0 Tf 0.10 0.17 0.31 rg 1 0 0 1 52.0 744.0 Tm (Java Swing and AWT Study Notes) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 699.0 Tm (Based on the Student Gradebook project) Tj ET
+0.87 0.90 0.95 rg 52.0 691.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 669.0 Tm (These notes explain the GUI APIs used in GradeSystemApp.java, how the screen is arranged,) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 655.0 Tm (and how the gradebook reacts to user input. The application uses Swing widgets, AWT layout) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 641.0 Tm (and styling classes, and a small object-oriented student model.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 616.0 Tm (1. Swing and AWT: how they fit together) Tj ET
+0.87 0.90 0.95 rg 52.0 608.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 586.0 Tm (AWT \(Abstract Window Toolkit\) is Java's original GUI foundation. It provides window-system) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 572.0 Tm (support, graphics primitives, colors, fonts, dimensions, and layout managers. Swing is a) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 558.0 Tm (richer GUI toolkit built on top of AWT. Swing components usually begin with J, such as) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 544.0 Tm (JFrame, JPanel, JButton, and JTable; AWT classes such as BorderLayout, Color, and Font are) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 530.0 Tm (still commonly used with them.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 509.0 Tm (In this project, AWT is mainly used for layout and appearance, while Swing supplies the) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 495.0 Tm (visible interface components. The student model itself does not depend on either GUI) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 481.0 Tm (toolkit.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 456.0 Tm (2. Main Swing components in the project) Tj ET
+0.87 0.90 0.95 rg 52.0 448.0 508.0 0.7 re f
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 426.0 Tm (Class                 Role in this gradebook) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 413.0 Tm (JFrame                The top-level application window. GradeSystemApp extends it.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 400.0 Tm (JPanel                A container used to group the header, summary cards, form,) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 387.0 Tm (                      and report.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 374.0 Tm (JLabel                Displays headings, field captions, status, student count, and) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 361.0 Tm (                      summary values.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 348.0 Tm (JTextField            Accepts the ID, name, and marks typed by the user.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 335.0 Tm (JButton               Runs the Add student and Reset all actions.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 322.0 Tm (JTable                Displays one row per student, with ID, name, marks, and) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 309.0 Tm (                      grade.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 296.0 Tm (DefaultTableModel     Stores the table's rows and column headings. The project) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 283.0 Tm (                      overrides isCellEditable to make report cells read-only.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 270.0 Tm (JScrollPane           Adds a scrollable viewport around the report table.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 257.0 Tm (UIManager             Selects the operating system's Swing look and feel when) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 244.0 Tm (                      available.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 231.0 Tm (SwingUtilities        Starts GUI creation on Swing's event-dispatch thread.) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 218.0 Tm (DefaultTableCellRenderer  Customizes table-cell alignment, font, background, and grade) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 205.0 Tm (                      color.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 178.0 Tm (3. AWT layout managers used) Tj ET
+0.87 0.90 0.95 rg 52.0 170.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 148.0 Tm (A layout manager positions components when a window is resized. It is generally preferable) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 134.0 Tm (to fixed pixel coordinates.) Tj ET
+BT /F2 13.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 113.0 Tm (BorderLayout) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 89.0 Tm (Divides a container into NORTH, SOUTH, EAST, WEST, and CENTER regions. The app uses it for) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 75.0 Tm (the main window and for cards that place a title, content, or action area in named regions.) Tj ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 4810 >>
+stream
+0.12 0.21 0.39 rg 0 778 612 14 re f
+0.12 0.31 0.68 rg 0 778 8 14 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 744.0 Tm (A region usually holds one component; use a nested JPanel when a region needs several) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 730.0 Tm (items.) Tj ET
+BT /F2 13.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 709.0 Tm (GridBagLayout and GridBagConstraints) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 685.0 Tm (Places components in a flexible grid. Each component's GridBagConstraints describes its) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 671.0 Tm (gridx/gridy position, weightx expansion, fill behavior, and insets spacing. The app uses it) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 657.0 Tm (for the four summary cards and for the three input fields. weightx = 1 and fill =) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 643.0 Tm (HORIZONTAL let the fields share available width.) Tj ET
+BT /F2 13.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 622.0 Tm (BoxLayout) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 598.0 Tm (Arranges components in one direction. The page uses Y_AXIS to stack the header, statistics,) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 584.0 Tm (form, and report. Small rigid areas provide vertical gaps.) Tj ET
+BT /F2 13.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 563.0 Tm (Insets and dimensions) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 539.0 Tm (Insets sets the space around a component within a grid cell. Dimension describes preferred) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 525.0 Tm (or minimum width and height. BorderFactory creates line, empty, compound, and matte) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 511.0 Tm (borders; combining a line border with an empty border gives a clean outline plus inner) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 497.0 Tm (padding.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 472.0 Tm (4. Events: making buttons do work) Tj ET
+0.87 0.90 0.95 rg 52.0 464.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 442.0 Tm (A GUI is event-driven: it waits for user actions and then calls a handler. The Add button) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 428.0 Tm (registers an action listener with a lambda, conceptually like this:) Tj ET
+0.95 0.96 0.98 rg 49.0 400.0 514.0 14.0 re f
+BT /F3 8.5 Tf 0.16 0.22 0.32 rg 1 0 0 1 57.0 404.0 Tm (addButton.addActionListener\(event -> addStudent\(\)\);) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 378.0 Tm (The Reset button similarly calls resetAll\(\). Keep event handlers short and move meaningful) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 364.0 Tm (work into named methods. In this project, addStudent\(\) reads and validates the fields,) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 350.0 Tm (creates a Student, adds a row, and updates the summary. resetAll\(\) clears both the model) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 336.0 Tm (data and visible values.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 311.0 Tm (5. Table model and custom rendering) Tj ET
+0.87 0.90 0.95 rg 52.0 303.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 281.0 Tm (DefaultTableModel separates the table's data from its display. The gradebook creates four) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 267.0 Tm (columns, then adds each student as a row. Overriding isCellEditable prevents accidental) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 253.0 Tm (editing of calculated report values.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 232.0 Tm (A JTable renderer controls how an individual cell is painted. ReportCellRenderer centers) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 218.0 Tm (ID, marks, and grade values, uses bold text for names and grades, and colors passing grades) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 204.0 Tm (differently from an F. Rendering changes appearance only; it should not modify the) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 190.0 Tm (underlying data.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 165.0 Tm (6. The gradebook's data model and rules) Tj ET
+0.87 0.90 0.95 rg 52.0 157.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 135.0 Tm (Person is an abstract parent class containing a name and ID. Student extends Person and) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 121.0 Tm (adds marks. This demonstrates encapsulation \(private fields with validated setters\),) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 107.0 Tm (inheritance \(Student extends Person\), and abstraction \(the base class represents shared) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 93.0 Tm (person details\).) Tj ET
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 4737 >>
+stream
+0.12 0.21 0.39 rg 0 778 612 14 re f
+0.12 0.31 0.68 rg 0 778 8 14 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 744.0 Tm (The grade thresholds are implemented in Student.calculateGrade\(\):) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 723.0 Tm (Marks                 Grade) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 710.0 Tm (90 to 100             A) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 697.0 Tm (80 to less than 90    B) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 684.0 Tm (70 to less than 80    C) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 671.0 Tm (60 to less than 70    D) Tj ET
+BT /F1 8.5 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 658.0 Tm (0 to less than 60     F) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 635.0 Tm (setMarks rejects values outside 0-100. The form additionally rejects invalid numeric input) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 621.0 Tm (and duplicate student IDs. The report is limited to five students, matching the original) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 607.0 Tm (console program.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 582.0 Tm (7. Summary calculations) Tj ET
+0.87 0.90 0.95 rg 52.0 574.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 552.0 Tm (After each successful addition, the application updates the class size, average, number) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 538.0 Tm (passing, and top grade. For $n$ students with marks $m_i$, the average is:) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 516.0 Tm (Average = sum of all marks divided by the number of students.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 494.0 Tm (The passing count includes grades A, B, C, and D; F is not passing. Since A is the highest) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 480.0 Tm (grade, the top grade is the best \(earliest in A-to-F order\) grade present in the class.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 455.0 Tm (8. Swing's event-dispatch thread) Tj ET
+0.87 0.90 0.95 rg 52.0 447.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 425.0 Tm (Swing components are generally not thread-safe. Create and show the interface on the) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 411.0 Tm (event-dispatch thread \(EDT\):) Tj ET
+0.95 0.96 0.98 rg 49.0 383.0 514.0 14.0 re f
+BT /F3 8.5 Tf 0.16 0.22 0.32 rg 1 0 0 1 57.0 387.0 Tm (SwingUtilities.invokeLater\(\(\) -> {) Tj ET
+0.95 0.96 0.98 rg 49.0 369.0 514.0 14.0 re f
+BT /F3 8.5 Tf 0.16 0.22 0.32 rg 1 0 0 1 57.0 373.0 Tm (new GradeSystemApp\(\).setVisible\(true\);) Tj ET
+0.95 0.96 0.98 rg 49.0 355.0 514.0 14.0 re f
+BT /F3 8.5 Tf 0.16 0.22 0.32 rg 1 0 0 1 57.0 359.0 Tm (}\);) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 333.0 Tm (Short event handlers are safe to run there. Long-running work should be moved off the EDT) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 319.0 Tm (\(for example, with SwingWorker\) so the window does not freeze.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 294.0 Tm (9. Colors, fonts, and look and feel) Tj ET
+0.87 0.90 0.95 rg 52.0 286.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 264.0 Tm (Color represents component and text colors. Font sets the family, style \(such as BOLD or) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 250.0 Tm (PLAIN\), and point size. Components such as JLabel and JButton provide methods like) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 236.0 Tm (setForeground, setBackground, and setFont.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 215.0 Tm (UIManager.setLookAndFeel\(UIManager.getSystemLookAndFeelClassName\(\)\) asks Swing to use the) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 201.0 Tm (operating system's native style. The app catches a failure and continues with Swing's) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 187.0 Tm (default appearance. A look and feel changes the visual theme, not the application's grade) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 173.0 Tm (rules.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 148.0 Tm (10. How the interface works, end to end) Tj ET
+0.87 0.90 0.95 rg 52.0 140.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 118.0 Tm (- The main method schedules window setup on the EDT.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 103.0 Tm (- The constructor configures the frame and builds panels for the header, statistics,) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 89.0 Tm (     entry form, and report.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 74.0 Tm (- The user types an ID, name, and mark, then selects Add student.) Tj ET
+
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 2680 >>
+stream
+0.12 0.21 0.39 rg 0 778 612 14 re f
+0.12 0.31 0.68 rg 0 778 8 14 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 744.0 Tm (- The handler parses input; Student validates the data and calculates a grade.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 729.0 Tm (- The student is added to the list and the table model; labels are recalculated.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 714.0 Tm (- Reset all clears the current report and enables another set of up to five entries.) Tj ET
+BT /F2 16.0 Tf 0.12 0.31 0.68 rg 1 0 0 1 52.0 690.0 Tm (11. Practical study tips) Tj ET
+0.87 0.90 0.95 rg 52.0 682.0 508.0 0.7 re f
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 660.0 Tm (  * Change one layout manager at a time and observe how resizing behaves.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 645.0 Tm (  * Try boundary marks: 59, 60, 69, 70, 79, 80, 89, 90, and 100.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 630.0 Tm (  * Test invalid marks, blank names, non-numeric input, and duplicate IDs.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 615.0 Tm (  * Add five students and verify that Add is disabled; then reset and confirm it is) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 601.0 Tm (     enabled again.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 586.0 Tm (  * Keep business rules in Student and interface behavior in GradeSystemApp so the model) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 572.0 Tm (     can be tested without opening a window.) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 557.0 Tm (  * Build Swing screens with nested panels and layout managers instead of absolute) Tj ET
+BT /F1 10.0 Tf 0.20 0.24 0.31 rg 1 0 0 1 52.0 543.0 Tm (     positioning.) Tj ET
+0.87 0.90 0.95 rg 52.0 43.0 508.0 0.7 re f
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 52.0 28.0 Tm (Java Swing Study Notes  |  Student Gradebook Project) Tj ET
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 492.0 28.0 Tm (Page 1 of 4) Tj ET
+0.87 0.90 0.95 rg 52.0 43.0 508.0 0.7 re f
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 52.0 28.0 Tm (Java Swing Study Notes  |  Student Gradebook Project) Tj ET
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 492.0 28.0 Tm (Page 2 of 4) Tj ET
+0.87 0.90 0.95 rg 52.0 43.0 508.0 0.7 re f
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 52.0 28.0 Tm (Java Swing Study Notes  |  Student Gradebook Project) Tj ET
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 492.0 28.0 Tm (Page 3 of 4) Tj ET
+0.87 0.90 0.95 rg 52.0 43.0 508.0 0.7 re f
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 52.0 28.0 Tm (Java Swing Study Notes  |  Student Gradebook Project) Tj ET
+BT /F1 8.0 Tf 0.42 0.47 0.55 rg 1 0 0 1 492.0 28.0 Tm (Page 4 of 4) Tj ET
+
+endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000021 00000 n 
+0000000070 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000293 00000 n 
+0000000361 00000 n 
+0000000507 00000 n 
+0000005699 00000 n 
+0000005845 00000 n 
+0000010707 00000 n 
+0000010855 00000 n 
+0000015645 00000 n 
+0000015793 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+18526
+%%EOF
